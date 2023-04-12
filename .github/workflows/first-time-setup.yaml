@@ -31,7 +31,7 @@ jobs:
 
       # clean slate, as if starting from orphan branch
       - name: Clear Pages branch
-        run: rm -rf * .docker .gitignore
+        run: rm -rf * .github .docker .gitignore
 
       # prevent GitHub from running Jekyll a second time after build
       - name: Make .nojekyll file
@@ -58,9 +58,9 @@ jobs:
             .github/workflows/versioning.yaml \
             .github/pull_request_template.md \
       
-      - name: Rename files
-        run: \
-          mv .github/user_pull_request_template.md .github/pull_request_template.md
+#       - name: Rename files
+#         run: \
+#           mv .github/user_pull_request_template.md .github/pull_request_template.md
 
       - name: Set vars for personalization
         run: |
